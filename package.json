@@ -1,16 +1,15 @@
 {
   "name": "ht-toolbar-balance",
-  "flat": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "ht-toolbar-balance.js",
   "repository": "https://github.com/maksimyurkov/ht-toolbar-balance",
   "author": "maksimyurkov <yurkov.maksim.sergeevich@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@polymer/lit-element": "^3.0.0-pre.10",
-    "@polymer/paper-styles": "^3.0.0-pre.10"
+    "@polymer/lit-element": "@next",
+    "@polymer/paper-styles": "@next"
   },
   "resolutions": {
-    "@polymer/paper-styles": "3.0.0-pre.10"
+    "@polymer/paper-styles": "@next"
   }
 }
