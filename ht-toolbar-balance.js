@@ -1,6 +1,6 @@
 "use strict";
-import { LitElement, html } from "../@polymer/lit-element/lit-element.js";
-import "../@polymer/paper-styles/default-theme.js";
+import { LitElement, html } from "@polymer/lit-element";
+import "@polymer/paper-styles/default-theme.js";
 
 class HTToolbarBalance extends LitElement {
   render({ href, balance }) {
@@ -26,7 +26,7 @@ class HTToolbarBalance extends LitElement {
         }
       </style>
 
-      <a href$=${href}>
+      <a href="${href}">
           <div id="balance">$${balance + ".00"}</div>
       </a>
 `;
