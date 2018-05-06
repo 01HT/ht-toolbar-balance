@@ -3,7 +3,7 @@ import { LitElement, html } from "@polymer/lit-element";
 import "@polymer/paper-styles/default-theme.js";
 
 class HTToolbarBalance extends LitElement {
-  render({ href, balance }) {
+  _render({ href, balance }) {
     return html`
       <style>
         :host {
