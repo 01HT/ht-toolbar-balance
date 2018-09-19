@@ -3,7 +3,8 @@ import { LitElement, html } from "@polymer/lit-element";
 import "@polymer/paper-styles/default-theme.js";
 
 class HTToolbarBalance extends LitElement {
-  _render({ href, balance }) {
+  render() {
+    const { href, balance } = this;
     return html`
       <style>
         :host {
@@ -26,7 +27,7 @@ class HTToolbarBalance extends LitElement {
         }
       </style>
 
-      <a href="${href}">
+      <a href=${href}>
           <div id="balance">$${balance + ".00"}</div>
       </a>
 `;
@@ -37,7 +38,7 @@ class HTToolbarBalance extends LitElement {
   }
 
   static get properties() {
-    return { href: String, balance: Number };
+    return { href: { type: String }, balance: { type: Number } };
   }
 }
 
