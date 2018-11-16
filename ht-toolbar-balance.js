@@ -16,10 +16,10 @@ class HTToolbarBalance extends LitElement {
         a {
           display:flex;
           align-items:center;
-            text-decoration: none;
-            color: inherit;
-            outline: none;
-            color:var(--secondary-text-color);
+          text-decoration: none;
+          color: inherit;
+          outline: none;
+          color:var(--secondary-text-color);
         }
 
         #balance {
@@ -27,8 +27,8 @@ class HTToolbarBalance extends LitElement {
         }
       </style>
 
-      <a href=${href}>
-          <div id="balance">$${balance + ".00"}</div>
+      <a href="${href}">
+        <div id="balance">$${balance}</div>
       </a>
 `;
   }
