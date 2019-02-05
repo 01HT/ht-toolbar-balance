@@ -28,7 +28,7 @@ class HTToolbarBalance extends LitElement {
       </style>
 
       <a href="${href}">
-        <div id="balance">$${balance}</div>
+        <div id="balance">₽${balance}</div>
       </a>
 `;
   }
