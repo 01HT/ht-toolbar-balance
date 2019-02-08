@@ -1,40 +1,36 @@
 "use strict";
-import { LitElement, html } from "@polymer/lit-element";
+import { LitElement, html, css } from "lit-element";
 import "@polymer/paper-styles/default-theme.js";
 
 class HTToolbarBalance extends LitElement {
+  static styles = css`<style>
+    :host {
+      display: block;
+      position: relative;
+      box-sizing: border-box;
+    }
+  
+    a {
+      display:flex;
+      align-items:center;
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      color:var(--secondary-text-color);
+    }
+
+    #balance {
+      font-size:16px;
+    }
+  </style>`;
+
   render() {
     const { href, balance } = this;
     return html`
-      <style>
-        :host {
-          display: block;
-          position: relative;
-          box-sizing: border-box;
-        }
-      
-        a {
-          display:flex;
-          align-items:center;
-          text-decoration: none;
-          color: inherit;
-          outline: none;
-          color:var(--secondary-text-color);
-        }
-
-        #balance {
-          font-size:16px;
-        }
-      </style>
-
       <a href="${href}">
         <div id="balance">₽${balance}</div>
       </a>
 `;
-  }
-
-  static get is() {
-    return "ht-toolbar-balance";
   }
 
   static get properties() {
@@ -42,4 +38,4 @@ class HTToolbarBalance extends LitElement {
   }
 }
 
-customElements.define(HTToolbarBalance.is, HTToolbarBalance);
+customElements.define("ht-toolbar-balance", HTToolbarBalance);
