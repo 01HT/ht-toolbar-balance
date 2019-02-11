@@ -2,27 +2,28 @@
 import { LitElement, html, css } from "lit-element";
 import "@polymer/paper-styles/default-theme.js";
 
-class HTToolbarBalance extends LitElement {
-  static styles = css`<style>
-    :host {
-      display: block;
-      position: relative;
-      box-sizing: border-box;
-    }
-  
-    a {
-      display:flex;
-      align-items:center;
-      text-decoration: none;
-      color: inherit;
-      outline: none;
-      color:var(--secondary-text-color);
-    }
+import { stylesBasicWebcomponents } from "@01ht/ht-theme/styles";
 
-    #balance {
-      font-size:16px;
-    }
-  </style>`;
+class HTToolbarBalance extends LitElement {
+  static get styles() {
+    return [
+      stylesBasicWebcomponents,
+      css`
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          outline: none;
+          color: var(--secondary-text-color);
+        }
+
+        #balance {
+          font-size: 16px;
+        }
+      `
+    ];
+  }
 
   render() {
     const { href, balance } = this;
